@@ -2,6 +2,7 @@
 <div class="maincontainer">
   <h1 class="title">{{ .Site.Title }}</h1>
 
+
   <div class="box">
     <h2 class="boxtitle">Notes</h2>
     {{ $mysection := site.GetPage "/notes/" }}
@@ -25,23 +26,40 @@
     <h2 class="boxtitle">Categories</h2>
     <div class="item">
       {{ $mysection := site.GetPage "/categories/" }}
-      <div class="">
+      <div>
         {{ range $mysection.Pages }}
           {{ if eq .Title "todo" }}
             {{continue}}
           {{end}}
         <div>
-        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ $classes := "title" }}
+        {{ if in .Site.Params.privateCategories .Title }}
+          {{ $classes = print $classes " private" }}
+        {{ end }}
+        <a class="{{ $classes }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ $innerpath := path.Join "/categories" .Title }}
         {{ $innersection := site.GetPage $innerpath }}
         <ul class="cats">
           {{ range $innersection.Pages }}
-          <li>{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ if and (eq .Params.private "true" true) (lt (strings.Count $classes "private") 1)}}
+              {{ $classes = print $classes " private" }}
+            {{ end }}
+            <li class="{{ $classes }}">{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
           {{ end }}
         </ul>
         </div>
         {{ end }}
       </div>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="control" id="privateControl">
+      <p class="controlLabel">Show Private</p>
+      <label class="switch">
+        <input type="checkbox" id="privateSlider">
+        <span class="slider round"></span>
+      </label>
     </div>
   </div>
 </div>

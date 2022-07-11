@@ -1,5 +1,9 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+{{ $classes := "item" }}
+{{ if .Params.private }}
+{{ $classes = print $classes " private" }}
+{{ end }}
 
 <div class="item">
   <div><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>

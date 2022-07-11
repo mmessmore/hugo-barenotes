@@ -24,6 +24,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/mmessmore/hugo-barenotes/cli/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -34,20 +35,14 @@ var startCmd = &cobra.Command{
 	Short:   "Run the hugo server and open the browser to it.",
 	Long:    `Start the hugo server running in the background for live editing.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("start called")
+		fmt.Println("Starting hugo server")
+		internal.CD()
+		internal.Start()
+		fmt.Println("Launching Browser")
+		internal.Open()
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(startCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// startCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// startCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

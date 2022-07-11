@@ -2,9 +2,17 @@ package internal
 
 import (
 	"fmt"
-	"os/exec"
 	"os"
+	"os/exec"
+	"strconv"
 )
+
+// Linux has up to 32768
+// MacOS up to 99998
+// FreeBSD up to 99999
+// So 5 bytes
+const MAX_PID_SIZE int = 5
+const PID_FILE string = ".hugo.pid"
 
 /*
 These functions all assume that the current working directory is the hugo
@@ -36,12 +44,28 @@ func Start() {
 }
 
 func Stop() {
-	// TODO: make this get the process by pid and kill it
-	// Getting the process by pid will always succeed, need to check it's real
+	pid, err := GetPid()
+	if err != nil {
+		fmt.Println("ERROR: Could not read pid file, is your hugo running?")
+		fmt.Println(err)
+		os.Exit(0)
+	}
+	proc, err := os.FindProcess(pid)
+	if err != nil {
+		fmt.Printf("WARNING: %d is not running.  Maybe hugo died?\n", pid)
+		os.Remove(PID_FILE)
+		return
+	}
+
+	err = proc.Kill()
+	if err != nil {
+		fmt.Println("ERROR: failed to stop hugo")
+	}
+	os.Remove(PID_FILE)
 }
 
 func SetPid(pid int) error {
-	pidFile, err := os.Create(".hugo.pid")
+	pidFile, err := os.Create(PID_FILE)
 	if err != nil {
 		return err
 	}
@@ -55,8 +79,21 @@ func SetPid(pid int) error {
 
 func GetPid() (int, error) {
 	var pid int
+	pidBytes := make([]byte, MAX_PID_SIZE)
 
-	//TODO: make this get the pid from the file
+	pidFile, err := os.Open(PID_FILE)
+	if err != nil {
+		return 0, err
+	}
+	_, err = pidFile.Read(pidBytes)
+	if err != nil {
+		return 0, err
+	}
+
+	pid, err = strconv.Atoi(string(pidBytes))
+	if err != nil {
+		return 0, err
+	}
 
 	return pid, nil
 }

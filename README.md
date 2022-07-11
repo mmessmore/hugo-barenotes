@@ -1,217 +1,67 @@
-# Barenotes: a Hugo theme and stuff
+# Messynotes: a Hugo theme and stuff
 
-I was frustrated with personal note taking systems and TODO list managers.
-So I made a thing.
+This is a simple theme for personal note taking and TODO management.
 
-## Premises
+I love Markdown based note management + revision control.  But all apps I had
+used frustrated me.  I made this theme in combination with [a
+CLI](https://github.com/mmessmore/messynotes) to make a system using Hugo to do
+a lot of the heavy lifting, because I love Hugo.
 
-These were the things I wanted
+## Features
 
-1. Use markdown
-   - I want plain text, that can render into pages
-   - I want to use git with it
-2. Use vim
-   - I'm tired of hitting ESC in some electron app
-3. I want it to render on save, not as I type
-4. I want to be able to super easily access it whenever I need to
+### Index
 
-## Story
+The index tracks recent notes on the left with the TODO always at the top.
 
-I started thinking about writing a tool that would render the pages and do
-the updates on file changes and, and, and...  I was about to try to write
-[Hugo](https://gohugo.io/).  I love Hugo.  I'll just use that.
+One the right, there is a bare list of tags, then a list of categories with the
+stream of titles for each.
 
-## CLI
+### Categorization
 
-The only issue with Hugo was that I wanted to be working on whatever and
-then just open my TODO list, pull it up, create a note, etc.
+Tags serve as a lookup for related notes.
+Categories function more as a per-topic stream.
 
-So I made a [wrapper CLI](./cli) for that.  When I create a config
-telling it where my notes repo is, I can type a simple command from
-whatever directory I'm in and do that.  It's a glorified shell script.
-It actually was a shell script and it's about 5% smarter now.  But it
-allows me to be able to add more functionality, sane config, etc.
+The idea is that you have multiple tags per note, and one category, but you can
+do what you want.
 
-The CLI only support Unix-like operating systems.  That is, this assumes '/'
-pathing and the syscall interface necessary to `exec` an editor.  I don't
-have a Windows system to develop or test on: just Mac and Linux.  If you
-want to add Windows support, that would be cool.  It would probably work in
-WSL.
+### "Private" Junk
 
-I will publish binary releases and possibly packages of the cli when I feel
-it's ready.  It's mostly feature complete, but I want to use it for a couple
-months before I'm brave enough to go there.
+Sometimes you share your screen and you don't want stuff showing up by default.
+So you can tag a note as "private" and/or add a list of private categories in
+your config.
 
+You can toggle them visible at the bottom of the page.
 
-## The Theme
+### Lightweight
 
-It's pretty spartan and that's intentional.  Just very simple HTML and
-a sprinkle of CSS.  No JavaScript at this point.  I'll try to avoid it
-if possible.  If I add any, it will be vanilla JS.  No frameworks.
+This uses as little JavaScript as possible.  0 CSS/JavaScript frameworks.  Only
+external dependency is fonts, which should degrade gracefully offline.  There
+are no browser-specific features or workarounds, just standard stuff.
 
-## Install the Theme/Set up Hugo To set it up it's probably easiest to
-do this:
+### Light/Dark
 
-```bash
-mkdir ~/notes # or whatever directory
-cd ~/notes
-git init
-mkdir themes
-git submodule add https://github.com/mmessmore/hugo-messynotes.git themes/messynotes
-cp -r themes/messynotes/exampleSite/* .
-```
+The color scheme will change based on the system/browser settings for light and
+dark mode.  This is done with a combination of CSS media queries and variables.
 
-If you don't want to submodule and just want to download the theme you could do
-something like
-```bash
-wget https://github.com/mmessmore/hugo-messynotes/archive/refs/heads/main.zip
-hugo init notes
-cd notes/themes
-unzip ../../main.zip
-rm ../../main.zip
-```
+## Contribution
 
-Whatever you want, just have this in your `themes` directory and see the
-`exampleSite` subdirectory for the expected layout, which is basically
-just the config file and a `contents/notes/TODO.md` file with `weight: 1`
-in the frontmatter.
+My usage of CSS is probably awkward and falls into the "it works for me"
+category.  Contributions to clean it up or generally make things prettier are
+appreciated.  I'm not a "frontend" guy, and I'm learning this new fangled CSS
+stuff that seems cool.
 
+I'll try to stick things I want to fix or would appreciate help with in
+[TODO.md](./TODO.md).
 
-## Install the cli tool
-If you have `go` installed you can run
-```bash
-cd themes/messynotes/cli
-go install # installs as "messynotes" wherever go sticks binaries
+PRs are appreciated.  I'll try to deal with bugs in Issues.  Feature requests
+without a PR will probably take some time and only be done if they seem useful
+to me personally.
 
-# or
-make install # installs as "notes" in ~/bin or set BINDIR to an alternate path
-```
+I have a pretty demanding "real job" as well as a family I enjoy being around.
 
-The `messynotes` or `notes` cli is relatively feature complete, but I'll
-probably test-drive it a bit more before I put up a release.
+## License
 
-
-## CLI Usage
-```text
-The messynotes hugo theme is designed to be a minimalistic
-system for maintaining personal notes and todo items.
-
-This is a wrapper cli for providing simple access to maintain and use it
-in this fashion.
-
-This will try its best to choose the text editor of your choice.  The order
-of precidence (first set wins): command line argument, config file,
-$VISUAL, $EDITOR, editor command (for update-alternatives), and vi.  If
-none are found, commands like 'new' will fail and you will need to
-specify in the config or on the command line.
-
-For the browser it will walk command line argument, config file, the 'open'
-command, and then the 'xdg-open' command.  If none work, it will fail.
-
-Usage:
-  messynotes [command]
-
-Available Commands:
-  completion  Generate the autocompletion script for the specified shell
-  help        Help about any command
-  new         Create a new note
-  open        Open a web browser to the hugo url (http://localhost:1313)
-  restart     Restart hugo server
-  showConfig  display configuration specified or implied
-  start       Run the hugo server and open the browser to it.
-  stop        Stop hugo server
-  todo        Edit TODO file
-
-Flags:
-  -b, --browser string   Web browser to use
-      --config string    config file (default $HOME/.messynotes.yaml)
-  -e, --editor string    Text editor to use
-  -h, --help             help for messynotes
-  -H, --hugo string      Hugo binary (default "hugo")
-  -r, --root string      Root of hugo repository (default ".")
-
-Use "messynotes [command] --help" for more information about a command.
-```
-
-## External tools and config
-
-It will do its best to find a web browser and editor for you.
-
-For the browser it will try to use the config, then the "system default"
-a few ways and then wander into an arbitrary list of browsers.
-
-1. command line option
-2. config file
-3. `open` for macos
-4. `xdg-open` for Linux/BSD with XDG stuff
-5. `x-www-browser` for /etc/alternatives (ie `update-alternatives`)
-6. `firefox`
-7. `google-chrome-stable`
-8. `chromium-browser`
-
-For the editor it will walk though:
-
-1. command line option
-2. config file
-3. `$VISUAL` environment variable
-4. `$EDITOR` environment variable
-5. `editor` for /etc/alternatives
-6. `vi`
-7. `nano`
-
-Without specifying a "root" in the config or on the command line, it
-will assume that `.` is the root.  Setting that will let you just run the
-command from anywhere.  You should do that.
-
-You can configure those, the location of the Hugo binary and the root
-directory of the repo in `~/.messynotes.yaml`.
-
-To take the working config as a starting point you can run `messynotes
-showConfig -y > ~/.messynotes.yaml` and edit it.
-
-# Contributing
-
-I'm open to making this prettier, but not adding external requirements.
-Code fixes and improvements are great. So feel free to put in a PR.
-
-You are also welcome to fork and dress it up past what I want to.
-
-This is a spare-time hobby project. I do have a real job that is pretty
-consuming and a family and responsibilities and stuff.  So I may not be
-prompt in addressing things.
-
-PRs will always be prioritized.  I'll try to address issues as well, when I
-can.  Bugs will, well, bug me.  So I'll try to get to those (but a PR is
-better).  Feature requests may take a while and my progress on this will
-be bursty.
-
-## Contributions I'm totally open to
-
-- [ ] Windows Support for the CLI
-- [ ] Actual tests for the CLI
-- [ ] Stuff to package the CLI for various operating systems (.deb, .rpm, etc)
-- [ ] Making the theme prettier
-- [ ] Features you think would be useful in the theme or CLI
-
-As said above, I'm avoiding JavaScript, but I'm OK if it's useful enough.  But
-I won't be taking contributions that add JS/CSS libraries or external
-dependencies other than fonts that degrade gracefully.
-
-# Code of Conduct
-
-Be nice to me.  Be nice to people submitting issues and PRs.  There are plenty
-of other places to be angry or mean on the internet.  Aggressive or rude
-behavior and language towards other people won't be tolerated even if you are
-"right."  Foul words in comments is fine as long as they are not hateful to
-other humans.
-
-# License
-
-This is licensed under the [MIT License](./LICENSE).
-
-You are welcome to do anything under those provisions (fork, make a commercial
-product, whatever).  If you want to include SweetFramework.js, cool icon sets,
-and that sort of thing but have this structure as a starting point, I will be
-flattered, not irritated, if you fork.  I'm not a front-end guy, and that's not
-what I want for myself.  Everyone has their own tastes and mine are not
-"right."
+This is licensed under the [MIT License](./LICENSE).  You are welcome to do
+anything within the terms of it: fork, make a product, whatever.  I will not be
+offended.  I'm not sure why people do get offended when someone does something
+within their license, but I am not one of them.

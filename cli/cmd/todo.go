@@ -10,6 +10,7 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -18,31 +19,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package internal
+package cmd
 
 import (
-	"fmt"
-	"os"
+	"github.com/mmessmore/hugo-barenotes/cli/internal"
+	"github.com/spf13/cobra"
 )
 
-// TODO: this shouldn't be hardcoded
-var URL = "http://localhost:1313"
+// todoCmd represents the todo command
+var todoCmd = &cobra.Command{
+	Use:   "todo",
+	Short: "Edit TODO file",
+	Run: func(cmd *cobra.Command, args []string) {
+		internal.Todo()
+	},
+}
 
-func Open() {
-
-	path, err := GetBrowser()
-	if err != nil {
-		fmt.Println("ERROR: could not find command to open browser")
-		os.Exit(0)
-	}
-
-	args := []string{path, URL}
-
-	proc, err := os.StartProcess(path, args, &os.ProcAttr{})
-	if err != nil {
-		fmt.Println("ERROR: could not open browser")
-		fmt.Println(err)
-		os.Exit(1)
-	}
-	proc.Release()
+func init() {
+	rootCmd.AddCommand(todoCmd)
 }

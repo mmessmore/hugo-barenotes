@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;600&family=Kalam&family=Source+Code+Pro:wght@500&display=swap');
+
+
+h1 {
+    text-align: center;
+}
+h1,h2,h3,h4 {
+    font-family: 'Anek Malayalam', sans-serif;
+}
+time {
+    font-family: 'Anek Malayalam', sans-serif;
+}
+blockquote {
+    font-family: 'Kalam', cursive;
+}
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+a:visited {
+    color: #00F;
+}
+nav#topNav {
+    width: 100%;
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+a.navLink {
+    grid-column-start: auto;
+    grid-column-end: span 1;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+div.maincontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+h1.title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+h2.boxtitle {
+    text-align: center;
+}
+div.box {
+    grid-column-start: auto;
+    grid-column-end: span 1;
+}
+a.title {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+ul.tags {
+    list-style-type: none;
+    margin: 0.3em 0 0 0;
+    padding: 0;
+    overflow: hidden;
+}
+li.tag {
+    float: left;
+    padding-right: 1em;
+    font-family: monospace;
+}
+li.tag:a {
+    text-decoration: none;
+}
+div.item {
+    border: 1px solid #000;
+    border-radius: 1em;
+    margin: 1em 2em 1em 2em;
+    padding: 1em;
+}
+div.tagContainer {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+div.indexTagContainer {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+div.tagItem {
+    grid-column-start: auto;
+    grid-column-end: span 1;
+    margin: 1em;
+    padding: 0.2em;
+    text-align: center;
+}
+div.tagItem a {
+    padding: 0 auto 0 auto;
+}
+.small {
+    font-size: 0.75em;
+}

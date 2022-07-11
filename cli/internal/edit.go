@@ -23,26 +23,49 @@ package internal
 import (
 	"fmt"
 	"os"
+	"os/exec"
+	"strings"
+	"syscall"
 )
 
-// TODO: this shouldn't be hardcoded
-var URL = "http://localhost:1313"
-
-func Open() {
-
-	path, err := GetBrowser()
+func Edit(path string) {
+	editor, err := GetEditor()
 	if err != nil {
-		fmt.Println("ERROR: could not find command to open browser")
-		os.Exit(0)
+		fmt.Println("ERROR: Could not find an editor to execute")
+		os.Exit(1)
 	}
 
-	args := []string{path, URL}
+	env := os.Environ()
 
-	proc, err := os.StartProcess(path, args, &os.ProcAttr{})
+	err = syscall.Exec(editor, []string{path}, env)
 	if err != nil {
-		fmt.Println("ERROR: could not open browser")
+		fmt.Printf("ERROR: failed to open editor on %s\n", path)
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	proc.Release()
+}
+
+func Create(title string) {
+	filename := fmt.Sprintf("notes/%s.md",
+		strings.ReplaceAll(strings.ToLower(title), " ", "-"))
+
+	hugo, err := exec.LookPath("hugo")
+	if err != nil {
+		fmt.Println("ERROR: Could not find hugo executable")
+		os.Exit(1)
+	}
+
+	cmd := exec.Command(hugo, "new", filename)
+	out, err := cmd.Output()
+	if err != nil {
+		fmt.Println("ERROR: Failed to run hugo")
+		fmt.Println(out)
+	}
+	filename = fmt.Sprintf("content/%s", filename)
+
+	Edit(filename)
+}
+
+func Todo() {
+	Edit("content/notes/todo.md")
 }

@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"os/exec"
@@ -22,7 +21,6 @@ func CD() {
 }
 
 func Create(title string) {
-
 	filename := fmt.Sprintf("notes/%s.md",
 		strings.ReplaceAll(strings.ToLower(title), " ", "-"))
 
@@ -53,33 +51,4 @@ func Create(title string) {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-}
-
-func GetEditor() (string, error) {
-	var err error
-	editor := viper.GetString("editor")
-	if editor == "" {
-		editor = os.Getenv("VISUAL")
-	}
-	if editor == "" {
-		editor = os.Getenv("EDITOR")
-	}
-	if editor == "" {
-		editor, err = exec.LookPath("editor")
-		if err != nil {
-			editor = ""
-		}
-	}
-	if editor == "" {
-		editor, err = exec.LookPath("vi")
-		if err != nil {
-			editor = ""
-		}
-	}
-
-	if editor == "" {
-		return "", errors.New("Could not find an editor to use")
-	}
-
-	return editor, nil
 }

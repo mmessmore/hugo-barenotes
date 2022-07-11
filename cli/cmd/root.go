@@ -64,6 +64,8 @@ func init() {
 	rootCmd.PersistentFlags().StringP("root", "r", ".", "Root of hugo repository")
 	rootCmd.PersistentFlags().StringP("editor", "e", "", "Text editor to use")
 	rootCmd.PersistentFlags().StringP("browser", "b", "", "Web browser to use")
+	rootCmd.PersistentFlags().StringP("hugo", "H", "hugo", "Hugo binary")
+	viper.BindPFlags(rootCmd.PersistentFlags())
 }
 
 // initConfig reads in config file and ENV variables if set.

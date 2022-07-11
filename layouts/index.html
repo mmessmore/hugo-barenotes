@@ -27,7 +27,10 @@
       {{ $mysection := site.GetPage "/categories/" }}
       <div class="">
         {{ range $mysection.Pages }}
-        <div class="small">
+          {{ if eq .Title "todo" }}
+            {{continue}}
+          {{end}}
+        <div>
         <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ $innerpath := path.Join "/categories" .Title }}
         {{ $innersection := site.GetPage $innerpath }}

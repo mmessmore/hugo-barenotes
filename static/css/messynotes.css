@@ -1,30 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;600&family=Kalam&family=Source+Code+Pro:wght@500&display=swap');
 
+/*
+ * Global variables
+ */
+:root {
+    /* Fonts */
+    --sans-serif: 'Anek Malayalam', sans-serif;
+    --cursive: 'Kalam', cursive;
+    --monospace: 'Source Code Pro', monospace;
+    --serif: serif;
+}
 
+/*
+ * Magical dark and light mode via variable colors
+ */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: white;
+        --fg: black;
+        --link: blue;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #212124;
+        --fg: white;
+        --link: #0080FF;
+    }
+}
+
+/*
+ * Generic  modifiers
+ */
+.small {
+    font-size: 0.75em;
+}
+.big {
+    font-size: 1.25em;
+}
+
+/*
+ * High-level tags
+ */
+body {
+    font-family: var(--serif);
+    background-color: var(--bg);
+    color: var(--fg);
+}
 h1 {
     text-align: center;
+    font-family: var(--sans-serif);
 }
-h1,h2,h3,h4 {
-    font-family: 'Anek Malayalam', sans-serif;
+h2,h3,h4 {
+    font-family: var(--sans-serif);
 }
 time {
-    font-family: 'Anek Malayalam', sans-serif;
+    font-family: var(--sans-serif);
 }
 blockquote {
-    font-family: 'Kalam', cursive;
+    font-family: var(--cursive);
 }
 code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--monospace);
+}
+a {
+    color: var(--link);
 }
 a:visited {
-    color: #00F;
+    color: var(--link);
 }
+
+/* navigation */
 nav#topNav {
     width: 100%;
     margin: 2em;
     display: grid;
-    /* TODO: this needs to be variable */
-    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
 }
 a.navLink {
     grid-column-start: auto;
@@ -33,9 +85,10 @@ a.navLink {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--sans-serif);
 }
 
+/* grid box layout for index */
 div.maincontainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -55,7 +108,7 @@ a.title {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--sans-serif);
 }
 ul.tags {
     list-style-type: none;
@@ -66,12 +119,13 @@ ul.tags {
 li.tag {
     float: left;
     padding-right: 1em;
-    font-family: monospace;
+    font-family: var(--monospace);
 }
 ul.cats {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
+    font-family
 }
 ul.cats li {
     margin-left: 0;
@@ -81,7 +135,7 @@ li.tag:a {
     text-decoration: none;
 }
 div.item {
-    border: 1px solid #000;
+    border: 1px solid var(--fg);
     border-radius: 1em;
     margin: 1em 2em 1em 2em;
     padding: 1em;
@@ -105,7 +159,4 @@ div.tagItem {
 }
 div.tagItem a {
     padding: 0 auto 0 auto;
-}
-.small {
-    font-size: 0.75em;
 }

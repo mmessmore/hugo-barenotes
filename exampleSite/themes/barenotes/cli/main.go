@@ -19,23 +19,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package cmd
+package main
 
-import (
-	"github.com/mmessmore/hugo-barenotes/cli/internal"
-	"github.com/spf13/cobra"
-)
+import "github.com/mmessmore/hugo-barenotes/cli/cmd"
 
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
-	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
-		internal.Todo()
-	},
-}
-
-func init() {
-	rootCmd.AddCommand(todoCmd)
+func main() {
+	cmd.Execute()
 }

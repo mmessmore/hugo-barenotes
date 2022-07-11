@@ -1,5 +1,4 @@
-/*
-Copyright © 2022 Mike Messmore <mike@messmore.org>
+/* Copyright © 2022 Mike Messmore <mike@messmore.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,16 +25,21 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
+// showConfigCmd represents the showConfig command
+var showConfigCmd = &cobra.Command{
+	Use:   "showConfig",
+	Short: "display configuration specified or implied",
 	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
-		internal.Todo()
+		doYaml, _ := cmd.Flags().GetBool("yaml")
+		if doYaml {
+			internal.DisplayYamlConfig()
+		} else {
+			internal.DisplayHumanConfig()
+		}
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoCmd)
+	rootCmd.AddCommand(showConfigCmd)
+	showConfigCmd.Flags().BoolP("yaml", "y", false, "Output YAML")
 }

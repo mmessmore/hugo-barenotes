@@ -10,7 +10,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -19,23 +18,54 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package cmd
+package internal
 
 import (
-	"github.com/mmessmore/hugo-barenotes/cli/internal"
-	"github.com/spf13/cobra"
+	"fmt"
+	"os"
+	"os/exec"
+	"strings"
+	"syscall"
 )
 
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
-	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
-		internal.Todo()
-	},
+func Edit(path string) {
+	editor, err := GetEditor()
+	if err != nil {
+		fmt.Println("ERROR: Could not find an editor to execute")
+		os.Exit(1)
+	}
+
+	env := os.Environ()
+
+	err = syscall.Exec(editor, []string{path}, env)
+	if err != nil {
+		fmt.Printf("ERROR: failed to open editor on %s\n", path)
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
 
-func init() {
-	rootCmd.AddCommand(todoCmd)
+func Create(title string) {
+	filename := fmt.Sprintf("notes/%s.md",
+		strings.ReplaceAll(strings.ToLower(title), " ", "-"))
+
+	hugo, err := exec.LookPath("hugo")
+	if err != nil {
+		fmt.Println("ERROR: Could not find hugo executable")
+		os.Exit(1)
+	}
+
+	cmd := exec.Command(hugo, "new", filename)
+	out, err := cmd.Output()
+	if err != nil {
+		fmt.Println("ERROR: Failed to run hugo")
+		fmt.Println(out)
+	}
+	filename = fmt.Sprintf("content/%s", filename)
+
+	Edit(filename)
+}
+
+func Todo() {
+	Edit("content/notes/todo.md")
 }

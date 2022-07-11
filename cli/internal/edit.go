@@ -37,7 +37,7 @@ func Edit(path string) {
 
 	env := os.Environ()
 
-	err = syscall.Exec(editor, []string{path}, env)
+	err = syscall.Exec(editor, []string{editor, path}, env)
 	if err != nil {
 		fmt.Printf("ERROR: failed to open editor on %s\n", path)
 		fmt.Println(err)
@@ -67,5 +67,5 @@ func Create(title string) {
 }
 
 func Todo() {
-	Edit("content/notes/todo.md")
+	Edit("content/notes/TODO.md")
 }

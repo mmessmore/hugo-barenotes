@@ -22,20 +22,22 @@ THE SOFTWARE.
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/mmessmore/hugo-barenotes/cli/internal"
 	"github.com/spf13/cobra"
 )
 
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
+// openCmd represents the open command
+var openCmd = &cobra.Command{
+	Use:   "open",
+	Short: "Open a web browser to the hugo url (http://localhost:1313)",
 	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
-		internal.Todo()
+		fmt.Println("Opening Browser")
+		internal.Open()
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoCmd)
+	rootCmd.AddCommand(openCmd)
 }

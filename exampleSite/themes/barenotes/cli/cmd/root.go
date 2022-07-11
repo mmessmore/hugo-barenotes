@@ -32,7 +32,7 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "barenotes",
+	Use:   "cli",
 	Short: "Wrapper CLI to use hugo as a personal note/todo system",
 	Long: `The barenotes hugo theme is designed to be a minimalistic
 system for maintaining personal notes and todo items.

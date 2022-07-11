@@ -1,4 +1,5 @@
-/*
+The MIT License (MIT)
+
 Copyright © 2022 Mike Messmore <mike@messmore.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,24 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-*/
-package cmd
-
-import (
-	"github.com/mmessmore/hugo-barenotes/cli/internal"
-	"github.com/spf13/cobra"
-)
-
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
-	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
-		internal.Todo()
-	},
-}
-
-func init() {
-	rootCmd.AddCommand(todoCmd)
-}

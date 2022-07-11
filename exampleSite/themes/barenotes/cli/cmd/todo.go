@@ -31,7 +31,6 @@ var todoCmd = &cobra.Command{
 	Use:   "todo",
 	Short: "Edit TODO file",
 	Run: func(cmd *cobra.Command, args []string) {
-		internal.CD()
 		internal.Todo()
 	},
 }

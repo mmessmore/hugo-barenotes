@@ -22,20 +22,28 @@ THE SOFTWARE.
 package cmd
 
 import (
+	"strings"
+
 	"github.com/mmessmore/hugo-barenotes/cli/internal"
 	"github.com/spf13/cobra"
 )
 
-// todoCmd represents the todo command
-var todoCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "Edit TODO file",
+// newCmd represents the new command
+var newCmd = &cobra.Command{
+	Args:    cobra.MinimumNArgs(1),
+	Use:     "new [TITLE OF NOTE]",
+	Aliases: []string{"create"},
+	Short:   "Create a new note",
+	Long: `Create a new note.
+
+The title can be 1 or more aguments joined by spaces`,
 	Run: func(cmd *cobra.Command, args []string) {
+		title := strings.Join(args, " ")
 		internal.CD()
-		internal.Todo()
+		internal.Create(title)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoCmd)
+	rootCmd.AddCommand(newCmd)
 }

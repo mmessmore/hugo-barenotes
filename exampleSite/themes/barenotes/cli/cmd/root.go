@@ -34,7 +34,7 @@ var cfgFile string
 var rootCmd = &cobra.Command{
 	Use:   "cli",
 	Short: "Wrapper CLI to use hugo as a personal note/todo system",
-	Long: `The barenotes hugo theme is designed to be a minimalistic
+	Long: `The messynotes hugo theme is designed to be a minimalistic
 system for maintaining personal notes and todo items.
 
 This is a wrapper cli for providing simple access to maintain and use it
@@ -60,7 +60,7 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default $HOME/.barenotes.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default $HOME/.messynotes.yaml)")
 	rootCmd.PersistentFlags().StringP("root", "r", ".", "Root of hugo repository")
 	rootCmd.PersistentFlags().StringP("editor", "e", "", "Text editor to use")
 	rootCmd.PersistentFlags().StringP("browser", "b", "", "Web browser to use")
@@ -81,7 +81,7 @@ func initConfig() {
 		// Search config in home directory with name ".cli" (without extension).
 		viper.AddConfigPath(home)
 		viper.SetConfigType("yaml")
-		viper.SetConfigName(".barenotes")
+		viper.SetConfigName(".messynotes")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match

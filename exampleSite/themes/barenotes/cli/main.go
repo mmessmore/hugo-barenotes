@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/mmessmore/hugo-barenotes/cli/cmd"
+import "github.com/mmessmore/hugo-messynotes/cli/cmd"
 
 func main() {
 	cmd.Execute()

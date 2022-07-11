@@ -67,6 +67,15 @@ li.tag {
     padding-right: 1em;
     font-family: monospace;
 }
+ul.cats {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+ul.cats li {
+    margin-left: 0;
+    padding-left: 0;
+}
 li.tag:a {
     text-decoration: none;
 }

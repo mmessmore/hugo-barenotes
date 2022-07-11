@@ -57,14 +57,14 @@ mkdir ~/notes # or whatever directory
 cd ~/notes
 git init
 mkdir themes
-git submodule add https://github.com/mmessmore/hugo-barenotes.git themes/barenotes
-cp -r themes/barenotes/exampleSite/* .
+git submodule add https://github.com/mmessmore/hugo-messynotes.git themes/messynotes
+cp -r themes/messynotes/exampleSite/* .
 ```
 
 If you don't want to submodule and just want to download the theme you could do
 something like
 ```bash
-wget https://github.com/mmessmore/hugo-barenotes/archive/refs/heads/main.zip
+wget https://github.com/mmessmore/hugo-messynotes/archive/refs/heads/main.zip
 hugo init notes
 cd notes/themes
 unzip ../../main.zip
@@ -80,20 +80,20 @@ in the frontmatter.
 ## Install the cli tool
 If you have `go` installed you can run
 ```bash
-cd themes/barenotes/cli
-go install # installs as "barenotes" wherever go sticks binaries
+cd themes/messynotes/cli
+go install # installs as "messynotes" wherever go sticks binaries
 
 # or
 make install # installs as "notes" in ~/bin or set BINDIR to an alternate path
 ```
 
-The `barenotes` or `notes` cli is relatively feature complete, but I'll
+The `messynotes` or `notes` cli is relatively feature complete, but I'll
 probably test-drive it a bit more before I put up a release.
 
 
 ## CLI Usage
 ```text
-The barenotes hugo theme is designed to be a minimalistic
+The messynotes hugo theme is designed to be a minimalistic
 system for maintaining personal notes and todo items.
 
 This is a wrapper cli for providing simple access to maintain and use it
@@ -109,7 +109,7 @@ For the browser it will walk command line argument, config file, the 'open'
 command, and then the 'xdg-open' command.  If none work, it will fail.
 
 Usage:
-  barenotes [command]
+  messynotes [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
@@ -124,13 +124,13 @@ Available Commands:
 
 Flags:
   -b, --browser string   Web browser to use
-      --config string    config file (default $HOME/.barenotes.yaml)
+      --config string    config file (default $HOME/.messynotes.yaml)
   -e, --editor string    Text editor to use
-  -h, --help             help for barenotes
+  -h, --help             help for messynotes
   -H, --hugo string      Hugo binary (default "hugo")
   -r, --root string      Root of hugo repository (default ".")
 
-Use "barenotes [command] --help" for more information about a command.
+Use "messynotes [command] --help" for more information about a command.
 ```
 
 ## External tools and config
@@ -164,10 +164,10 @@ will assume that `.` is the root.  Setting that will let you just run the
 command from anywhere.  You should do that.
 
 You can configure those, the location of the Hugo binary and the root
-directory of the repo in `~/.barenotes.yaml`.
+directory of the repo in `~/.messynotes.yaml`.
 
-To take the working config as a starting point you can run `barenotes
-showConfig -y > ~/.barenotes.yaml` and edit it.
+To take the working config as a starting point you can run `messynotes
+showConfig -y > ~/.messynotes.yaml` and edit it.
 
 # Contributing
 

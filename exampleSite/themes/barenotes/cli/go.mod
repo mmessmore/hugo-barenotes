@@ -1,4 +1,4 @@
-module github.com/mmessmore/hugo-barenotes/cli
+module github.com/mmessmore/hugo-messynotes/cli
 
 go 1.18
 

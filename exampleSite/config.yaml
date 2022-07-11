@@ -1,7 +1,7 @@
 baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'My Notes'
-theme: 'barenotes'
+theme: 'messynotes'
 markup:
   goldmark:
     extensions:

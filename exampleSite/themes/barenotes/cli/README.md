@@ -1,7 +1,7 @@
 # Barenotes CLI
 
 This is a CLI to facilitate using Hugo as a personal notes/TODO system via the
-[barenotes hugo theme](../).
+[messynotes hugo theme](../).
 
 This will only work on Unix-like operating systems because I didn't even try to
 support Windows pathing and don't have a Windows system to test on.

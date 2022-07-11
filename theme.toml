@@ -3,9 +3,9 @@
 
 name = "Barenotes"
 license = "MIT"
-licenselink = "https://github.com/mmessmore/hugo-barenotes/blob/main/LICENSE"
+licenselink = "https://github.com/mmessmore/hugo-messynotes/blob/main/LICENSE"
 description = "A minimal Hugo theme and cli for personal notes/TODO"
-homepage = "https://github.com/mmessmore/hugo-barenotes"
+homepage = "https://github.com/mmessmore/hugo-messynotes"
 tags = []
 features = []
 min_version = "0.41.0"

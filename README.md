@@ -1,7 +1,7 @@
 # Barenotes: a Hugo theme and stuff
 
-I was frustrated with personal note taking systems and TODO list managers.  So
-I made a thing.
+I was frustrated with personal note taking systems and TODO list managers.
+So I made a thing.
 
 ## Premises
 
@@ -17,29 +17,29 @@ These were the things I wanted
 
 ## Story
 
-I started thinking about writing a tool that would render the pages and do the
-updates on file changes and, and, and...  I was about to try to write
+I started thinking about writing a tool that would render the pages and do
+the updates on file changes and, and, and...  I was about to try to write
 [Hugo](https://gohugo.io/).  I love Hugo.  I'll just use that.
 
 ## CLI
 
-The only issue with Hugo was that I wanted to be working on whatever and then
-just open my TODO list, pull it up, create a note, etc.
+The only issue with Hugo was that I wanted to be working on whatever and
+then just open my TODO list, pull it up, create a note, etc.
 
-So I made a [wrapper CLI](./cli) for that.  When I create a config telling it
-where my notes repo is, I can type a simple command from whatever directory I'm
-in and do that.  It's a glorified shell script.  It actually was a shell script
-and it's about 5% smarter now.  But it allows me to be able to add more
-functionality, sane config, etc.
+So I made a [wrapper CLI](./cli) for that.  When I create a config
+telling it where my notes repo is, I can type a simple command from
+whatever directory I'm in and do that.  It's a glorified shell script.
+It actually was a shell script and it's about 5% smarter now.  But it
+allows me to be able to add more functionality, sane config, etc.
 
 ## The Theme
 
-It's pretty spartan and that's intentional.  Just very simple HTML and a
-sprinkle of CSS.  No JavaScript at this point.  I'll try to avoid it if
-possible.  If I add any, it will be vanilla JS.  No frameworks.
+It's pretty spartan and that's intentional.  Just very simple HTML and
+a sprinkle of CSS.  No JavaScript at this point.  I'll try to avoid it
+if possible.  If I add any, it will be vanilla JS.  No frameworks.
 
-## Install the Theme/Set up Hugo
-To set it up it's probably easiest to do this:
+## Install the Theme/Set up Hugo To set it up it's probably easiest to
+do this:
 
 ```bash
 mkdir ~/notes # or whatever directory
@@ -126,8 +126,8 @@ Use "barenotes [command] --help" for more information about a command.
 
 It will do its best to find a web browser and editor for you.
 
-For the browser it will try to use the config, then the "system default" a few
-ways and then wander into an arbitrary list of browsers.
+For the browser it will try to use the config, then the "system default"
+a few ways and then wander into an arbitrary list of browsers.
 
 1. command line option
 2. config file
@@ -148,12 +148,47 @@ For the editor it will walk though:
 6. `vi`
 7. `nano`
 
-Without specifying a "root" in the config or on the command line, it will
-assume that `.` is the root.  Setting that will let you just run the command
-from anywhere.  You should do that.
+Without specifying a "root" in the config or on the command line, it
+will assume that `.` is the root.  Setting that will let you just run the
+command from anywhere.  You should do that.
 
 You can configure those, the location of the Hugo binary and the root
 directory of the repo in `~/.barenotes.yaml`.
 
 To take the working config as a starting point you can run `barenotes
 showConfig -y > ~/.barenotes.yaml` and edit it.
+
+# Contributing
+
+I'm open to making this prettier, but not adding external requirements.
+Code fixes and improvements are great. So feel free to put in a PR.
+
+You are also welcome to fork and dress it up past what I want to.
+
+This is a spare-time hobby project. I do have a real job that is pretty
+consuming and a family and responsibilities and stuff.  So I may not be
+prompt in addressing things.
+
+PRs will always be prioritized.  I'll try to address issues as well, when I
+can.  Bugs will, well, bug me.  So I'll try to get to those (but a PR is
+better).  Feature requests may take a while and my progress on this will
+be bursty.
+
+# Code of Conduct
+
+Be nice to me.  Be nice to people submitting issues and PRs.  There are plenty
+of other places to be angry or mean on the internet.  Aggressive or rude
+behavior and language towards other people won't be tolerated even if you are
+"right."  Foul words in comments is fine as long as they are not hateful to
+other humans.
+
+# License
+
+This is licensed under the [MIT License](./LICENSE).
+
+You are welcome to do anything under those provisions (fork, make a commercial
+product, whatever).  If you want to include SweetFramework.js, cool icon sets,
+and that sort of thing but have this structure as a starting point, I will be
+flattered, not irritated, if you fork.  I'm not a front-end guy, and that's not
+what I want for myself.  Everyone has their own tastes and mine are not
+"right."

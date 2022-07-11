@@ -88,6 +88,17 @@ a.navLink {
     font-family: var(--sans-serif);
 }
 
+/* footer */
+
+div.footer {
+    margin-top: 1em;
+    font-weight: bold;
+    font-family: var(--sans-serif);
+    width: 100%;
+    text-align: center;
+}
+
+
 /* grid box layout for index */
 div.maincontainer {
     display: grid;

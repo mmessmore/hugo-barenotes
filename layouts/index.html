@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $privateCats := .Site.Params.privateCategories }}
 <div class="maincontainer">
   <h1 class="title">{{ .Site.Title }}</h1>
 
@@ -7,7 +8,19 @@
     <h2 class="boxtitle">Notes</h2>
     {{ $mysection := site.GetPage "/notes/" }}
     {{ range $mysection.Pages }}
+      {{ $noteClass := "" }}
+      {{ $private := false }}
+      {{ range .Params.categories }}
+        {{ if in $privateCats . }}
+          {{ $private = true }}
+        {{ end }}
+      {{ end }}
+      {{ if or (eq .Params.private "true" true) $private }}
+        {{ $noteClass = "private" }}
+      {{ end }}
+    <div class="{{ $noteClass }}">
       {{ partial "listitem.html" . }}
+    </div>
     {{ end }}
   </div>
 

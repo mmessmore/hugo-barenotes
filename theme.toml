@@ -3,19 +3,13 @@
 
 name = "Barenotes"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/mmessmore/hugo-barenotes/blob/main/LICENSE"
+description = "A minimal Hugo theme and cli for personal notes/TODO"
+homepage = "https://github.com/mmessmore/hugo-barenotes"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Mike Messmore"
+  homepage = "http://messmore.org"

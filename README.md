@@ -32,6 +32,17 @@ whatever directory I'm in and do that.  It's a glorified shell script.
 It actually was a shell script and it's about 5% smarter now.  But it
 allows me to be able to add more functionality, sane config, etc.
 
+The CLI only support Unix-like operating systems.  That is, this assumes '/'
+pathing and the syscall interface necessary to `exec` an editor.  I don't
+have a Windows system to develop or test on: just Mac and Linux.  If you
+want to add Windows support, that would be cool.  It would probably work in
+WSL.
+
+I will publish binary releases and possibly packages of the cli when I feel
+it's ready.  It's mostly feature complete, but I want to use it for a couple
+months before I'm brave enough to go there.
+
+
 ## The Theme
 
 It's pretty spartan and that's intentional.  Just very simple HTML and
@@ -173,6 +184,18 @@ PRs will always be prioritized.  I'll try to address issues as well, when I
 can.  Bugs will, well, bug me.  So I'll try to get to those (but a PR is
 better).  Feature requests may take a while and my progress on this will
 be bursty.
+
+## Contributions I'm totally open to
+
+- [ ] Windows Support for the CLI
+- [ ] Actual tests for the CLI
+- [ ] Stuff to package the CLI for various operating systems (.deb, .rpm, etc)
+- [ ] Making the theme prettier
+- [ ] Features you think would be useful in the theme or CLI
+
+As said above, I'm avoiding JavaScript, but I'm OK if it's useful enough.  But
+I won't be taking contributions that add JS/CSS libraries or external
+dependencies other than fonts that degrade gracefully.
 
 # Code of Conduct
 

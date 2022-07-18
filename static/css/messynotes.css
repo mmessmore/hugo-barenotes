@@ -240,3 +240,11 @@ label.switch input:checked + .slider:before {
 .private {
     display: none;
 }
+
+/* table of contents */
+nav#TableOfContents {
+    border: 1px solid  var(--fg);
+    border-radius: 0.5em;
+}
+nav#TableOfContents ul {
+}

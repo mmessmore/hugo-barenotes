@@ -45,6 +45,10 @@
     div#singleMetadata {
         display: none;
     }
+
+    @page {
+        margin: 5em;
+    }
 }
 
 /*

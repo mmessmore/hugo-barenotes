@@ -9,7 +9,10 @@
     --cursive: 'Kalam', cursive;
     --monospace: 'Source Code Pro', monospace;
     --serif: serif;
+    --nav-display: grid;
+    --footer-display: block;
 }
+
 
 /*
  * Magical dark and light mode via variable colors
@@ -27,6 +30,24 @@
         --bg: #212124;
         --fg: white;
         --link: #0080FF;
+    }
+}
+
+@media print {
+    :root {
+        --bg: white;
+        --fg: black;
+        --link: blue;
+        --nav-display: none;
+        --footer-display: none;
+    }
+
+    body {
+        margin: 1em 5em 1em 5em;
+    }
+
+    div#singleMetadata {
+        display: none;
     }
 }
 
@@ -90,7 +111,7 @@ tr:nth-child(even) {
 nav#topNav {
     width: 100%;
     margin: 2em;
-    display: grid;
+    display: var(--nav-display);
     grid-auto-flow: column;
 }
 a.navLink {
@@ -111,6 +132,7 @@ div.footer {
     font-family: var(--sans-serif);
     width: 100%;
     text-align: center;
+    display: var(--footer-display);
 }
 
 
@@ -254,6 +276,11 @@ label.switch input:checked + .slider:before {
 /* private stuff */
 .private {
     display: none;
+}
+
+/* single display */
+div#singleContent {
+    padding-top: 2em;
 }
 
 /* table of contents */

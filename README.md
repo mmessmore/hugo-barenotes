@@ -5,7 +5,11 @@ This is a simple theme for personal note taking and TODO management.
 I love Markdown based note management + revision control.  But all apps I had
 used frustrated me.  I made this theme in combination with [a
 CLI](https://github.com/mmessmore/messynotes) to make a system using Hugo to do
-a lot of the heavy lifting, because I love Hugo.
+a lot of the heavy lifting.
+
+It is easiest to consume via the [messynotes
+command](https://github.com/mmessmore/messynotes), but this could be consumed
+separately.
 
 ## Features
 

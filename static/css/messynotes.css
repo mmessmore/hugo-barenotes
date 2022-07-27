@@ -282,8 +282,15 @@ label.switch input:checked + .slider:before {
 }
 
 /* single display */
-div#singleContent {
-    padding-top: 2em;
+div#singleContent p:first-of-type {
+    display: none;
+}
+div#singleMetadata time {
+    display: inline;
+}
+div#singleMetadata ul {
+    display: inline;
+    float: right;
 }
 
 /* table of contents */

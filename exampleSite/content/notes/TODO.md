@@ -3,29 +3,28 @@ title: TODO List
 date: 2022-01-24T14:43:21.032Z
 lastmod: 2022-04-28T19:41:20.418Z
 weight: 1
-summary: Current TODO list
 tags: [todo]
+categories: [todo]
 ---
 
-## Now
+Stuff I need to do
 
-- [ ] Make the theme less ugly
-  - maybe fix fonts or something?
-- [x] Keep up on [The History of China
-  podcast](https://thehistoryofchina.wordpress.com/)
-- [x] Keep up on [The History of Persia
-  podcast](https://historyofpersiapodcast.com/)
-- [x] Keep up on [The History of English
-  podcast](https://historyofenglishpodcast.com/)
-- [ ] Catch up to current on [History of Egypt
-  podcast](https://www.egyptianhistorypodcast.com/)
+<!--more-->
+
 
 ## Soon
 
-- [ ] Memorize all of [errno.h](./errno.h)
-- [ ] Find another History of *something* podcast
+- Job things
+
+## Links to lookup
+
+- [Read more about Temüjin](https://en.wikipedia.org/wiki/Genghis_Khan)
+
+## Personal
+
+- Improve [messynotes](https://github.com/mmessmore/messynotes)
 
 ## One day
 
-- [ ] Learn a form of Chinese
-- [ ] Retire and do a lot of fishing
+- So Pretty: [DevTerm Kit
+  A06](https://www.clockworkpi.com/product-page/devterm-kit-a06-series)

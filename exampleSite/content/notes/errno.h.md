@@ -2,9 +2,14 @@
 title: errno.h
 date: 2022-01-28T14:37:28.403Z
 lastmod: 2022-01-28T14:40:57.135Z
-summary: errno.h contents
 tags: [reference, errors]
+categories: [reference]
 ---
+
+`errno.h` contents
+
+<!--more-->
+
 
 ## `errno.h`
 

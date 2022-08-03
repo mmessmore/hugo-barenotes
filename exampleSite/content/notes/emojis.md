@@ -1,10 +1,10 @@
 ---
-title:: "Emojis"
-date:: 2022-08-03T13:04:24-05:00
-tags:: ["reference", "emojis"]
+title: "Emojis"
+date: 2022-08-03T13:04:24-05:00
+tags: ["reference", "emojis"]
 categories:
   - reference
-private:: false
+private: false
 ---
 
 Emojis Codes

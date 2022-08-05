@@ -25,22 +25,11 @@
   </div>
 
   <div class="box">
-    <h2 class="boxtitle">Tags</h2>
-    <div class="item">
-      {{ $mysection := site.GetPage "/tags/" }}
-      <div class="indexTagContainer">
-        {{ range (sort $mysection.Pages "Title") }}
-        <div class="tagItem small">
-        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </div>
-        {{ end }}
-      </div>
-    </div>
     <h2 class="boxtitle">Categories</h2>
     <div class="item">
       {{ $mysection := site.GetPage "/categories/" }}
       <div>
-        {{ range $mysection.Pages }}
+        {{ range (sort $mysection.Pages "Title") }}
           {{ if eq .Title "todo" }}
             {{continue}}
           {{end}}
@@ -61,6 +50,17 @@
             </li>
           {{ end }}
         </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <h2 class="boxtitle">Tags</h2>
+    <div class="item">
+      {{ $mysection := site.GetPage "/tags/" }}
+      <div class="indexTagContainer">
+        {{ range (sort $mysection.Pages "Title") }}
+        <div class="tagItem small">
+        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </div>
         {{ end }}
       </div>

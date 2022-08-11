@@ -300,3 +300,8 @@ nav#TableOfContents {
 }
 nav#TableOfContents ul {
 }
+
+/* music */
+pre.abc {
+    display: none;
+}

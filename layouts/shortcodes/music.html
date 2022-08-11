@@ -1,0 +1,15 @@
+{{ $rand := index (seq 1000 | shuffle) 0 }}
+<pre class="abc" id="abcjs-{{ $rand }}">
+  {{.Inner}}
+</pre>
+<div class="paper" id="paper-{{ $rand }}"></div>
+<script>
+  window.onload = (event) => {
+    var abcString = document.querySelector("#abcjs-{{ $rand }}").textContent;
+    ABCJS.renderAbc(
+      "paper-{{ $rand }}",
+      abcString,
+      { add_classes: true }
+    );
+  };
+</script>

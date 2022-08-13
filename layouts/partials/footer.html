@@ -1,11 +1,14 @@
-
-<script type="text/javascript" src="/js/messynotes.js"></script>
+{{ $root := site.BaseUrl }}
+{{ if site.IsServer }}
+{{ $root = "" }}
+{{ end }}
+<script type="text/javascript" src="{{$root}}/js/messynotes.js"></script>
 {{ if .Page.Store.Get "hasAbc" }}
-<script type="text/javascript" src="/js/abcjs-basic-min.js"></script>
-<script type="text/javascript" src="/js/music.js"></script>
+<script type="text/javascript" src="{{ $root }}/js/abcjs-basic-min.js"></script>
+<script type="text/javascript" src="{{ $root }}/js/music.js"></script>
 {{ end }}
 {{ if .Page.Store.Get "hasMermaid" }}
-<script src="/js/mermaid.min.js"></script>
+<script src="{{ $root }}/js/mermaid.min.js"></script>
 <script>
   mermaid.initialize({ startOnLoad: true });
 </script>

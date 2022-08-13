@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="/css/site.css">
     {{ if .Params.music }}
     <link rel="stylesheet" type="text/css" href="/css/abcjs-audio.css">
-    <script type="text/javascript" src="/js/abcjs-basic-min.js"></script>
     {{ end }}
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}

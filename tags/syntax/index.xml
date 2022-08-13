@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>errors on My Notes</title>
-    <link>https://mmessmore.github.io/hugo-messynotes/tags/errors/</link>
-    <description>Recent content in errors on My Notes</description>
+    <title>syntax on My Notes</title>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/syntax/</link>
+    <description>Recent content in syntax on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jan 2022 14:37:28 +0000</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/errors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 14:37:28 +0000</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>errno.h</title>
       <link>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>

@@ -62,12 +62,21 @@
     </item>
     
     <item>
+      <title>Overrides</title>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/overrides/</link>
+      <pubDate>Fri, 28 Jan 2022 15:37:28 +0000</pubDate>
+      
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/overrides/</guid>
+      <description>&lt;p&gt;Locations of files to override for customization.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>errno.h</title>
       <link>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>
       <pubDate>Fri, 28 Jan 2022 14:37:28 +0000</pubDate>
       
       <guid>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</guid>
-      <description>&lt;p&gt;&lt;code&gt;errno.h&lt;/code&gt; contents&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;code&gt;errno.h&lt;/code&gt; contents as a codefence example&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>override on My Notes</title>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/override/</link>
+    <description>Recent content in override on My Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jan 2022 15:37:28 +0000</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/override/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overrides</title>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/overrides/</link>
+      <pubDate>Fri, 28 Jan 2022 15:37:28 +0000</pubDate>
+      
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/overrides/</guid>
+      <description>&lt;p&gt;Locations of files to override for customization.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

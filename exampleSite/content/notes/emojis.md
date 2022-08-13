@@ -4,7 +4,6 @@ date: 2022-08-03T13:04:24-05:00
 tags: ["reference", "emojis"]
 categories:
   - reference
-private: false
 ---
 
 Emojis Codes

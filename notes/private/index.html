@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet type=text/css href=/css/messynotes.css><link rel=stylesheet type=text/css href=/css/syntax.css><link rel=stylesheet type=text/css href=/css/site.css><title>My Notes | Private Notes</title></head><body><div><nav id=topNav><a class=navLink href=/hugo-messynotes/>Home</a>
+<a class=navLink href=/hugo-messynotes/notes/>Notes</a>
+<a class=navLink href=/hugo-messynotes/tags/>Tags</a></nav></div><div id=content><h1>Private Notes</h1><div id=singleMetadata><time datetime=2022-08-13>Aug 13, 2022</time><ul class=tags><li class=tag><a class=tag href=http://mmessmore.github.io/hugo-messynotes/tags/private>private</a></li></ul></div><div id=singleContent><p>Sometimes you don&rsquo;t want to share</p><h2 id=premise>Premise</h2><p>In these days of Zoom meetings, you may be sharing your screen. When
+navigating note to note, it might be nice to hide some entries by default.</p><h2 id=what-it-does>What it does</h2><p>Private entries are only shown on the index if the little &ldquo;private&rdquo; toggle is
+turned on at the bottom (off by default).</p><p>This is <em><strong>NOT</strong></em> a security measure. It just changes the display on the
+index. To provide <em>a</em> measure to keep from embarrassing yourself.</p><h2 id=how-to>How to</h2><p>To have a hidden category, you could have the following in your site&rsquo;s
+<code>config.yaml</code> file:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>params</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>privateCategories</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#ae81ff>secrets</span>
+</span></span></code></pre></div><p>That will hide the category and any notes contained in it from the index.</p><p>Or if you just want to make an individual note private you can set it in the
+front-matter like</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>private</span>: <span style=color:#66d9ef>true</span>
+</span></span></code></pre></div><h2 id=caveats>Caveats</h2><p>This does not change the listing in <code>/categories</code> and <code>/tags</code>, <em>only</em> the index
+itself.</p><p>There are some weird side-effects. If the category is not private, but all of
+the notes in it are, then the category will still be listed, but with no
+entries.</p><p>Tags are not dealt with at all (at least yet). You can&rsquo;t hide a tag, and any
+tag you use in a private note will still show on the index.</p><h2 id=example>Example</h2><p><a href=/notes/secrets>This is an example private note</a></p></div></div><script type=text/javascript src=/js/messynotes.js></script><div class=footer><a href=https://github.com/mmessmore/hugo-messynotes>Messynotes Hugo Theme</a> &copy;2022 Mike Messmore</div></body></html>

@@ -7,4 +7,4 @@ for i in *; do
 	cp -r "$i" themes/messynotes
 done
 cp -r exampleSite/* ./
-sed -i 's/example\.org/mmessmore.github.io\/hugo-messynotes/' config.yaml
+sed -i 's!http://example\.org!https://mmessmore.github.io/hugo-messynotes!' config.yaml

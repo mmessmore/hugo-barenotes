@@ -1,6 +1,4 @@
-# Messynotes: a Hugo theme and stuff
-
-This is a simple theme for personal note taking and TODO management.
+# Messynotes: a Hugo theme for personal notes/TODO
 
 I love Markdown based note management + revision control.  But all apps I had
 used frustrated me.  I made this theme in combination with [a
@@ -8,8 +6,14 @@ CLI](https://github.com/mmessmore/messynotes) to make a system using Hugo to do
 a lot of the heavy lifting.
 
 It is easiest to consume via the [messynotes
-command](https://github.com/mmessmore/messynotes), but this could be consumed
-separately.
+command](https://github.com/mmessmore/messynotes), but this could be used
+separately if you're into that.
+
+## Example
+
+You can [view the sample site](https://mmessmore.github.io/hugo-messynotes).
+It contains notes with samples of features and some basic documentation of how
+to use them.
 
 ## Features
 

@@ -1,4 +1,3 @@
 # Things that probably need work
 
-- support "private" tags
-- CSS/HTML love
+- I broke the private toggle somehow

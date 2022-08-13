@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>personal on My Notes</title>
-    <link>http://mmessmore.github.io/hugo-messynotes/tags/personal/</link>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/personal/</link>
     <description>Recent content in personal on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Private Notes</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/secrets/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/secrets/</link>
       <pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/secrets/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/secrets/</guid>
       <description>&lt;p&gt;My secret entry&lt;/p&gt;</description>
     </item>
     

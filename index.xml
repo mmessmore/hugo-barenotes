@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Notes</title>
-    <link>http://mmessmore.github.io/hugo-messynotes/</link>
+    <link>https://mmessmore.github.io/hugo-messynotes/</link>
     <description>Recent content on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TODO List</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/todo/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/todo/</link>
       <pubDate>Mon, 24 Jan 2022 14:43:21 +0000</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/todo/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/todo/</guid>
       <description>&lt;p&gt;Stuff I need to do&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Private Notes</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/private/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/private/</link>
       <pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/private/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/private/</guid>
       <description>&lt;p&gt;Sometimes you don&amp;rsquo;t want to share&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Private Notes</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/secrets/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/secrets/</link>
       <pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/secrets/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/secrets/</guid>
       <description>&lt;p&gt;My secret entry&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mermaid</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/mermaid/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/mermaid/</link>
       <pubDate>Sat, 13 Aug 2022 06:42:11 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/mermaid/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/mermaid/</guid>
       <description>&lt;p&gt;You can make diagrams with mermaid&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Music</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/music/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/music/</link>
       <pubDate>Sat, 13 Aug 2022 06:36:14 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/music/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/music/</guid>
       <description>&lt;p&gt;You can show pretty sheet music with ABC&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emojis</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/emojis/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/emojis/</link>
       <pubDate>Wed, 03 Aug 2022 13:04:24 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/emojis/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/emojis/</guid>
       <description>&lt;p&gt;Emojis Codes&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>errno.h</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>
       <pubDate>Fri, 28 Jan 2022 14:37:28 +0000</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/errno.h/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</guid>
       <description>&lt;p&gt;&lt;code&gt;errno.h&lt;/code&gt; contents&lt;/p&gt;</description>
     </item>
     

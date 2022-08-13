@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emojis on My Notes</title>
-    <link>http://mmessmore.github.io/hugo-messynotes/tags/emojis/</link>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/emojis/</link>
     <description>Recent content in emojis on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Aug 2022 13:04:24 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/tags/emojis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2022 13:04:24 -0500</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/emojis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emojis</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/emojis/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/emojis/</link>
       <pubDate>Wed, 03 Aug 2022 13:04:24 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/emojis/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/emojis/</guid>
       <description>&lt;p&gt;Emojis Codes&lt;/p&gt;</description>
     </item>
     

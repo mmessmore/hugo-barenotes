@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>errors on My Notes</title>
-    <link>http://mmessmore.github.io/hugo-messynotes/tags/errors/</link>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/errors/</link>
     <description>Recent content in errors on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jan 2022 14:37:28 +0000</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/tags/errors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 14:37:28 +0000</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/errors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>errno.h</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</link>
       <pubDate>Fri, 28 Jan 2022 14:37:28 +0000</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/errno.h/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/errno.h/</guid>
       <description>&lt;p&gt;&lt;code&gt;errno.h&lt;/code&gt; contents&lt;/p&gt;</description>
     </item>
     

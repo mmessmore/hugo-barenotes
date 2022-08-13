@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>music on My Notes</title>
-    <link>http://mmessmore.github.io/hugo-messynotes/tags/music/</link>
+    <link>https://mmessmore.github.io/hugo-messynotes/tags/music/</link>
     <description>Recent content in music on My Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Aug 2022 06:36:14 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 06:36:14 -0500</lastBuildDate><atom:link href="https://mmessmore.github.io/hugo-messynotes/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Music</title>
-      <link>http://mmessmore.github.io/hugo-messynotes/notes/music/</link>
+      <link>https://mmessmore.github.io/hugo-messynotes/notes/music/</link>
       <pubDate>Sat, 13 Aug 2022 06:36:14 -0500</pubDate>
       
-      <guid>http://mmessmore.github.io/hugo-messynotes/notes/music/</guid>
+      <guid>https://mmessmore.github.io/hugo-messynotes/notes/music/</guid>
       <description>&lt;p&gt;You can show pretty sheet music with ABC&lt;/p&gt;</description>
     </item>
     

@@ -1,16 +1,14 @@
 
 <script type="text/javascript" src="/js/messynotes.js"></script>
-{{ if .Params.music }}
+{{ if .Page.Store.Get "hasAbc" }}
 <script type="text/javascript" src="/js/abcjs-basic-min.js"></script>
-<script>
-  window.onload = (event) =>{
-    var abcs = document.querySelectorAll("code.language-abc");
-
-    abcs.forEach(el =>{
-      console.log(el.textContent);
-    });
-  };
-</script>
-
+<script type="text/javascript" src="/js/music.js"></script>
 {{ end }}
+{{ if .Page.Store.Get "hasMermaid" }}
+<script src="/js/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{{ end }}
+
 <div class="footer"><a href="https://github.com/mmessmore/hugo-messynotes">Messynotes Hugo Theme</a> &copy;2022 Mike Messmore</div>

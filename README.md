@@ -47,6 +47,22 @@ are no browser-specific features or workarounds, just standard stuff.
 The color scheme will change based on the system/browser settings for light and
 dark mode.  This is done with a combination of CSS media queries and variables.
 
+### Extended Markup Support
+
+To the lightweight point, all of the below are supported by JavaScript
+libraries, but they are only loaded into pages in which they are used.  The
+JavaScript files are in the theme itself and do not reference a CDN so that it
+can degrade gracefully when not connected to the internet.
+
+#### Mermaid.js
+
+Mermaid diagrams are rendered in "mermaid" code fences
+
+#### ABC
+
+For music/scores, [ABC Notation](https://abcnotation.com/) is rendered from
+"abc" code fences.
+
 ## Contribution
 
 My usage of CSS is probably awkward and falls into the "it works for me"

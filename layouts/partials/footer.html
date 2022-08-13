@@ -1,4 +1,5 @@
-{{ $root := site.BaseURL }}
+{{ $root := ( replace site.BaseURL "http" "")}}
+{{ $root = ( replace $root "https" "")}}
 {{ if site.IsServer }}
 {{ $root = "/" }}
 {{ end }}

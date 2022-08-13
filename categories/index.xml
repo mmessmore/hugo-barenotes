@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on My Notes</title><link>http://mmessmore.github.io/hugo-messynotes/categories/</link><description>Recent content in Categories on My Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>reference</title><link>http://mmessmore.github.io/hugo-messynotes/categories/reference/</link><pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate><guid>http://mmessmore.github.io/hugo-messynotes/categories/reference/</guid><description/></item><item><title>secrets</title><link>http://mmessmore.github.io/hugo-messynotes/categories/secrets/</link><pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate><guid>http://mmessmore.github.io/hugo-messynotes/categories/secrets/</guid><description/></item><item><title>todo</title><link>http://mmessmore.github.io/hugo-messynotes/categories/todo/</link><pubDate>Mon, 24 Jan 2022 14:43:21 +0000</pubDate><guid>http://mmessmore.github.io/hugo-messynotes/categories/todo/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My Notes</title>
+    <link>http://mmessmore.github.io/hugo-messynotes/categories/</link>
+    <description>Recent content in Categories on My Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Aug 2022 06:57:34 -0500</lastBuildDate><atom:link href="http://mmessmore.github.io/hugo-messynotes/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reference</title>
+      <link>http://mmessmore.github.io/hugo-messynotes/categories/reference/</link>
+      <pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate>
+      
+      <guid>http://mmessmore.github.io/hugo-messynotes/categories/reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>secrets</title>
+      <link>http://mmessmore.github.io/hugo-messynotes/categories/secrets/</link>
+      <pubDate>Sat, 13 Aug 2022 06:57:34 -0500</pubDate>
+      
+      <guid>http://mmessmore.github.io/hugo-messynotes/categories/secrets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>todo</title>
+      <link>http://mmessmore.github.io/hugo-messynotes/categories/todo/</link>
+      <pubDate>Mon, 24 Jan 2022 14:43:21 +0000</pubDate>
+      
+      <guid>http://mmessmore.github.io/hugo-messynotes/categories/todo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,135 +1,197 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet type=text/css href=/css/messynotes.css><link rel=stylesheet type=text/css href=/css/syntax.css><link rel=stylesheet type=text/css href=/css/site.css><title>My Notes | errno.h</title></head><body><div><nav id=topNav><a class=navLink href=/hugo-messynotes/>Home</a>
-<a class=navLink href=/hugo-messynotes/notes/>Notes</a>
-<a class=navLink href=/hugo-messynotes/tags/>Tags</a></nav></div><div id=content><h1>errno.h</h1><div id=singleMetadata><time datetime=2022-01-28>Jan 28, 2022</time><ul class=tags><li class=tag><a class=tag href=http://mmessmore.github.io/hugo-messynotes/tags/reference>reference</a></li><li class=tag><a class=tag href=http://mmessmore.github.io/hugo-messynotes/tags/errors>errors</a></li></ul></div><div id=singleContent><p><code>errno.h</code> contents</p><h2 id=errnoh><code>errno.h</code></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>#define EPERM        1  </span><span style=color:#75715e>/* Operation not permitted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOENT       2  </span><span style=color:#75715e>/* No such file or directory */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESRCH        3  </span><span style=color:#75715e>/* No such process */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EINTR        4  </span><span style=color:#75715e>/* Interrupted system call */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EIO          5  </span><span style=color:#75715e>/* I/O error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENXIO        6  </span><span style=color:#75715e>/* No such device or address */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define E2BIG        7  </span><span style=color:#75715e>/* Argument list too long */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOEXEC      8  </span><span style=color:#75715e>/* Exec format error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADF        9  </span><span style=color:#75715e>/* Bad file number */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECHILD      10  </span><span style=color:#75715e>/* No child processes */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EAGAIN      11  </span><span style=color:#75715e>/* Try again */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOMEM      12  </span><span style=color:#75715e>/* Out of memory */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EACCES      13  </span><span style=color:#75715e>/* Permission denied */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EFAULT      14  </span><span style=color:#75715e>/* Bad address */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTBLK     15  </span><span style=color:#75715e>/* Block device required */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBUSY       16  </span><span style=color:#75715e>/* Device or resource busy */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EEXIST      17  </span><span style=color:#75715e>/* File exists */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EXDEV       18  </span><span style=color:#75715e>/* Cross-device link */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENODEV      19  </span><span style=color:#75715e>/* No such device */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTDIR     20  </span><span style=color:#75715e>/* Not a directory */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EISDIR      21  </span><span style=color:#75715e>/* Is a directory */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EINVAL      22  </span><span style=color:#75715e>/* Invalid argument */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENFILE      23  </span><span style=color:#75715e>/* File table overflow */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EMFILE      24  </span><span style=color:#75715e>/* Too many open files */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTTY      25  </span><span style=color:#75715e>/* Not a typewriter */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ETXTBSY     26  </span><span style=color:#75715e>/* Text file busy */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EFBIG       27  </span><span style=color:#75715e>/* File too large */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOSPC      28  </span><span style=color:#75715e>/* No space left on device */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESPIPE      29  </span><span style=color:#75715e>/* Illegal seek */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EROFS       30  </span><span style=color:#75715e>/* Read-only file system */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EMLINK      31  </span><span style=color:#75715e>/* Too many links */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EPIPE       32  </span><span style=color:#75715e>/* Broken pipe */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDOM        33  </span><span style=color:#75715e>/* Math argument out of domain of func */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ERANGE      34  </span><span style=color:#75715e>/* Math result not representable */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDEADLK     35  </span><span style=color:#75715e>/* Resource deadlock would occur */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENAMETOOLONG    36  </span><span style=color:#75715e>/* File name too long */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOLCK      37  </span><span style=color:#75715e>/* No record locks available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOSYS      38  </span><span style=color:#75715e>/* Function not implemented */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTEMPTY   39  </span><span style=color:#75715e>/* Directory not empty */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELOOP       40  </span><span style=color:#75715e>/* Too many symbolic links encountered */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EWOULDBLOCK EAGAIN  </span><span style=color:#75715e>/* Operation would block */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOMSG      42  </span><span style=color:#75715e>/* No message of desired type */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EIDRM       43  </span><span style=color:#75715e>/* Identifier removed */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECHRNG      44  </span><span style=color:#75715e>/* Channel number out of range */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EL2NSYNC    45  </span><span style=color:#75715e>/* Level 2 not synchronized */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EL3HLT      46  </span><span style=color:#75715e>/* Level 3 halted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EL3RST      47  </span><span style=color:#75715e>/* Level 3 reset */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELNRNG      48  </span><span style=color:#75715e>/* Link number out of range */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EUNATCH     49  </span><span style=color:#75715e>/* Protocol driver not attached */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOCSI      50  </span><span style=color:#75715e>/* No CSI structure available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EL2HLT      51  </span><span style=color:#75715e>/* Level 2 halted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADE       52  </span><span style=color:#75715e>/* Invalid exchange */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADR       53  </span><span style=color:#75715e>/* Invalid request descriptor */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EXFULL      54  </span><span style=color:#75715e>/* Exchange full */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOANO      55  </span><span style=color:#75715e>/* No anode */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADRQC     56  </span><span style=color:#75715e>/* Invalid request code */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADSLT     57  </span><span style=color:#75715e>/* Invalid slot */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDEADLOCK   EDEADLK
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBFONT      59  </span><span style=color:#75715e>/* Bad font file format */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOSTR      60  </span><span style=color:#75715e>/* Device not a stream */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENODATA     61  </span><span style=color:#75715e>/* No data available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ETIME       62  </span><span style=color:#75715e>/* Timer expired */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOSR       63  </span><span style=color:#75715e>/* Out of streams resources */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENONET      64  </span><span style=color:#75715e>/* Machine is not on the network */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOPKG      65  </span><span style=color:#75715e>/* Package not installed */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EREMOTE     66  </span><span style=color:#75715e>/* Object is remote */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOLINK     67  </span><span style=color:#75715e>/* Link has been severed */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EADV        68  </span><span style=color:#75715e>/* Advertise error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESRMNT      69  </span><span style=color:#75715e>/* Srmount error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECOMM       70  </span><span style=color:#75715e>/* Communication error on send */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EPROTO      71  </span><span style=color:#75715e>/* Protocol error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EMULTIHOP   72  </span><span style=color:#75715e>/* Multihop attempted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDOTDOT     73  </span><span style=color:#75715e>/* RFS specific error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADMSG     74  </span><span style=color:#75715e>/* Not a data message */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EOVERFLOW   75  </span><span style=color:#75715e>/* Value too large for defined data type */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTUNIQ    76  </span><span style=color:#75715e>/* Name not unique on network */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EBADFD      77  </span><span style=color:#75715e>/* File descriptor in bad state */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EREMCHG     78  </span><span style=color:#75715e>/* Remote address changed */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELIBACC     79  </span><span style=color:#75715e>/* Can not access a needed shared library */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELIBBAD     80  </span><span style=color:#75715e>/* Accessing a corrupted shared library */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELIBSCN     81  </span><span style=color:#75715e>/* .lib section in a.out corrupted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELIBMAX     82  </span><span style=color:#75715e>/* Attempting to link in too many shared libraries */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ELIBEXEC    83  </span><span style=color:#75715e>/* Cannot exec a shared library directly */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EILSEQ      84  </span><span style=color:#75715e>/* Illegal byte sequence */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ERESTART    85  </span><span style=color:#75715e>/* Interrupted system call should be restarted */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESTRPIPE    86  </span><span style=color:#75715e>/* Streams pipe error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EUSERS      87  </span><span style=color:#75715e>/* Too many users */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTSOCK    88  </span><span style=color:#75715e>/* Socket operation on non-socket */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDESTADDRREQ    89  </span><span style=color:#75715e>/* Destination address required */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EMSGSIZE    90  </span><span style=color:#75715e>/* Message too long */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EPROTOTYPE  91  </span><span style=color:#75715e>/* Protocol wrong type for socket */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOPROTOOPT 92  </span><span style=color:#75715e>/* Protocol not available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EPROTONOSUPPORT 93  </span><span style=color:#75715e>/* Protocol not supported */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESOCKTNOSUPPORT 94  </span><span style=color:#75715e>/* Socket type not supported */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EOPNOTSUPP  95  </span><span style=color:#75715e>/* Operation not supported on transport endpoint */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EPFNOSUPPORT    96  </span><span style=color:#75715e>/* Protocol family not supported */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EAFNOSUPPORT    97  </span><span style=color:#75715e>/* Address family not supported by protocol */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EADDRINUSE  98  </span><span style=color:#75715e>/* Address already in use */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EADDRNOTAVAIL   99  </span><span style=color:#75715e>/* Cannot assign requested address */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENETDOWN    100 </span><span style=color:#75715e>/* Network is down */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENETUNREACH 101 </span><span style=color:#75715e>/* Network is unreachable */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENETRESET   102 </span><span style=color:#75715e>/* Network dropped connection because of reset */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECONNABORTED    103 </span><span style=color:#75715e>/* Software caused connection abort */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECONNRESET  104 </span><span style=color:#75715e>/* Connection reset by peer */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOBUFS     105 </span><span style=color:#75715e>/* No buffer space available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EISCONN     106 </span><span style=color:#75715e>/* Transport endpoint is already connected */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTCONN    107 </span><span style=color:#75715e>/* Transport endpoint is not connected */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESHUTDOWN   108 </span><span style=color:#75715e>/* Cannot send after transport endpoint shutdown */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ETOOMANYREFS    109 </span><span style=color:#75715e>/* Too many references: cannot splice */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ETIMEDOUT   110 </span><span style=color:#75715e>/* Connection timed out */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECONNREFUSED    111 </span><span style=color:#75715e>/* Connection refused */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EHOSTDOWN   112 </span><span style=color:#75715e>/* Host is down */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EHOSTUNREACH    113 </span><span style=color:#75715e>/* No route to host */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EALREADY    114 </span><span style=color:#75715e>/* Operation already in progress */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EINPROGRESS 115 </span><span style=color:#75715e>/* Operation now in progress */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ESTALE      116 </span><span style=color:#75715e>/* Stale NFS file handle */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EUCLEAN     117 </span><span style=color:#75715e>/* Structure needs cleaning */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTNAM     118 </span><span style=color:#75715e>/* Not a XENIX named type file */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENAVAIL     119 </span><span style=color:#75715e>/* No XENIX semaphores available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EISNAM      120 </span><span style=color:#75715e>/* Is a named type file */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EREMOTEIO   121 </span><span style=color:#75715e>/* Remote I/O error */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EDQUOT      122 </span><span style=color:#75715e>/* Quota exceeded */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOMEDIUM   123 </span><span style=color:#75715e>/* No medium found */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EMEDIUMTYPE 124 </span><span style=color:#75715e>/* Wrong medium type */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ECANCELED   125 </span><span style=color:#75715e>/* Operation Canceled */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOKEY      126 </span><span style=color:#75715e>/* Required key not available */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EKEYEXPIRED 127 </span><span style=color:#75715e>/* Key has expired */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EKEYREVOKED 128 </span><span style=color:#75715e>/* Key has been revoked */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define EKEYREJECTED    129 </span><span style=color:#75715e>/* Key was rejected by service */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e>/* for robust mutexes */</span>
-</span></span><span style=display:flex><span><span style=color:#75715e>#define EOWNERDEAD  130 </span><span style=color:#75715e>/* Owner died */</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ENOTRECOVERABLE 131 </span><span style=color:#75715e>/* State not recoverable */</span><span style=color:#75715e>
-</span></span></span></code></pre></div></div></div><script type=text/javascript src=/js/messynotes.js></script><div class=footer><a href=https://github.com/mmessmore/hugo-messynotes>Messynotes Hugo Theme</a> &copy;2022 Mike Messmore</div></body></html>
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/messynotes.css">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+  <link rel="stylesheet" type="text/css" href="/css/site.css">
+  
+  
+  
+  <title>My Notes | errno.h</title>
+</head>
+<body><div>
+  <nav id="topNav">
+    
+    <a class="navLink" href="/hugo-messynotes/">
+    
+    Home
+    </a>
+    
+    <a class="navLink" href="/hugo-messynotes/notes/">
+    
+    Notes
+    </a>
+    
+    <a class="navLink" href="/hugo-messynotes/tags/">
+    
+    Tags
+    </a>
+    
+  </nav>
+</div>
+<div id="content">
+<h1>errno.h</h1>
+<div id="singleMetadata">
+
+
+<time datetime="2022-01-28">Jan 28, 2022</time>
+
+<ul class="tags">
+
+
+<li class="tag"><a class="tag" href="http://mmessmore.github.io/hugo-messynotes/tags/reference">reference</a></li>
+
+
+<li class="tag"><a class="tag" href="http://mmessmore.github.io/hugo-messynotes/tags/errors">errors</a></li>
+
+</ul>
+
+
+</div>
+<div id="singleContent">
+<p><code>errno.h</code> contents</p>
+<h2 id="errnoh"><code>errno.h</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define EPERM        1  </span><span style="color:#75715e">/* Operation not permitted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOENT       2  </span><span style="color:#75715e">/* No such file or directory */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESRCH        3  </span><span style="color:#75715e">/* No such process */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EINTR        4  </span><span style="color:#75715e">/* Interrupted system call */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EIO          5  </span><span style="color:#75715e">/* I/O error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENXIO        6  </span><span style="color:#75715e">/* No such device or address */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define E2BIG        7  </span><span style="color:#75715e">/* Argument list too long */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOEXEC      8  </span><span style="color:#75715e">/* Exec format error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADF        9  </span><span style="color:#75715e">/* Bad file number */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECHILD      10  </span><span style="color:#75715e">/* No child processes */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EAGAIN      11  </span><span style="color:#75715e">/* Try again */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOMEM      12  </span><span style="color:#75715e">/* Out of memory */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EACCES      13  </span><span style="color:#75715e">/* Permission denied */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EFAULT      14  </span><span style="color:#75715e">/* Bad address */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTBLK     15  </span><span style="color:#75715e">/* Block device required */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBUSY       16  </span><span style="color:#75715e">/* Device or resource busy */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EEXIST      17  </span><span style="color:#75715e">/* File exists */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EXDEV       18  </span><span style="color:#75715e">/* Cross-device link */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENODEV      19  </span><span style="color:#75715e">/* No such device */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTDIR     20  </span><span style="color:#75715e">/* Not a directory */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EISDIR      21  </span><span style="color:#75715e">/* Is a directory */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EINVAL      22  </span><span style="color:#75715e">/* Invalid argument */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENFILE      23  </span><span style="color:#75715e">/* File table overflow */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EMFILE      24  </span><span style="color:#75715e">/* Too many open files */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTTY      25  </span><span style="color:#75715e">/* Not a typewriter */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ETXTBSY     26  </span><span style="color:#75715e">/* Text file busy */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EFBIG       27  </span><span style="color:#75715e">/* File too large */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOSPC      28  </span><span style="color:#75715e">/* No space left on device */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESPIPE      29  </span><span style="color:#75715e">/* Illegal seek */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EROFS       30  </span><span style="color:#75715e">/* Read-only file system */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EMLINK      31  </span><span style="color:#75715e">/* Too many links */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EPIPE       32  </span><span style="color:#75715e">/* Broken pipe */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDOM        33  </span><span style="color:#75715e">/* Math argument out of domain of func */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ERANGE      34  </span><span style="color:#75715e">/* Math result not representable */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDEADLK     35  </span><span style="color:#75715e">/* Resource deadlock would occur */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENAMETOOLONG    36  </span><span style="color:#75715e">/* File name too long */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOLCK      37  </span><span style="color:#75715e">/* No record locks available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOSYS      38  </span><span style="color:#75715e">/* Function not implemented */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTEMPTY   39  </span><span style="color:#75715e">/* Directory not empty */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELOOP       40  </span><span style="color:#75715e">/* Too many symbolic links encountered */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EWOULDBLOCK EAGAIN  </span><span style="color:#75715e">/* Operation would block */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOMSG      42  </span><span style="color:#75715e">/* No message of desired type */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EIDRM       43  </span><span style="color:#75715e">/* Identifier removed */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECHRNG      44  </span><span style="color:#75715e">/* Channel number out of range */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EL2NSYNC    45  </span><span style="color:#75715e">/* Level 2 not synchronized */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EL3HLT      46  </span><span style="color:#75715e">/* Level 3 halted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EL3RST      47  </span><span style="color:#75715e">/* Level 3 reset */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELNRNG      48  </span><span style="color:#75715e">/* Link number out of range */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EUNATCH     49  </span><span style="color:#75715e">/* Protocol driver not attached */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOCSI      50  </span><span style="color:#75715e">/* No CSI structure available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EL2HLT      51  </span><span style="color:#75715e">/* Level 2 halted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADE       52  </span><span style="color:#75715e">/* Invalid exchange */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADR       53  </span><span style="color:#75715e">/* Invalid request descriptor */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EXFULL      54  </span><span style="color:#75715e">/* Exchange full */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOANO      55  </span><span style="color:#75715e">/* No anode */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADRQC     56  </span><span style="color:#75715e">/* Invalid request code */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADSLT     57  </span><span style="color:#75715e">/* Invalid slot */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDEADLOCK   EDEADLK
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBFONT      59  </span><span style="color:#75715e">/* Bad font file format */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOSTR      60  </span><span style="color:#75715e">/* Device not a stream */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENODATA     61  </span><span style="color:#75715e">/* No data available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ETIME       62  </span><span style="color:#75715e">/* Timer expired */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOSR       63  </span><span style="color:#75715e">/* Out of streams resources */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENONET      64  </span><span style="color:#75715e">/* Machine is not on the network */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOPKG      65  </span><span style="color:#75715e">/* Package not installed */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EREMOTE     66  </span><span style="color:#75715e">/* Object is remote */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOLINK     67  </span><span style="color:#75715e">/* Link has been severed */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EADV        68  </span><span style="color:#75715e">/* Advertise error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESRMNT      69  </span><span style="color:#75715e">/* Srmount error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECOMM       70  </span><span style="color:#75715e">/* Communication error on send */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EPROTO      71  </span><span style="color:#75715e">/* Protocol error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EMULTIHOP   72  </span><span style="color:#75715e">/* Multihop attempted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDOTDOT     73  </span><span style="color:#75715e">/* RFS specific error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADMSG     74  </span><span style="color:#75715e">/* Not a data message */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EOVERFLOW   75  </span><span style="color:#75715e">/* Value too large for defined data type */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTUNIQ    76  </span><span style="color:#75715e">/* Name not unique on network */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EBADFD      77  </span><span style="color:#75715e">/* File descriptor in bad state */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EREMCHG     78  </span><span style="color:#75715e">/* Remote address changed */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELIBACC     79  </span><span style="color:#75715e">/* Can not access a needed shared library */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELIBBAD     80  </span><span style="color:#75715e">/* Accessing a corrupted shared library */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELIBSCN     81  </span><span style="color:#75715e">/* .lib section in a.out corrupted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELIBMAX     82  </span><span style="color:#75715e">/* Attempting to link in too many shared libraries */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ELIBEXEC    83  </span><span style="color:#75715e">/* Cannot exec a shared library directly */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EILSEQ      84  </span><span style="color:#75715e">/* Illegal byte sequence */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ERESTART    85  </span><span style="color:#75715e">/* Interrupted system call should be restarted */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESTRPIPE    86  </span><span style="color:#75715e">/* Streams pipe error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EUSERS      87  </span><span style="color:#75715e">/* Too many users */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTSOCK    88  </span><span style="color:#75715e">/* Socket operation on non-socket */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDESTADDRREQ    89  </span><span style="color:#75715e">/* Destination address required */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EMSGSIZE    90  </span><span style="color:#75715e">/* Message too long */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EPROTOTYPE  91  </span><span style="color:#75715e">/* Protocol wrong type for socket */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOPROTOOPT 92  </span><span style="color:#75715e">/* Protocol not available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EPROTONOSUPPORT 93  </span><span style="color:#75715e">/* Protocol not supported */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESOCKTNOSUPPORT 94  </span><span style="color:#75715e">/* Socket type not supported */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EOPNOTSUPP  95  </span><span style="color:#75715e">/* Operation not supported on transport endpoint */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EPFNOSUPPORT    96  </span><span style="color:#75715e">/* Protocol family not supported */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EAFNOSUPPORT    97  </span><span style="color:#75715e">/* Address family not supported by protocol */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EADDRINUSE  98  </span><span style="color:#75715e">/* Address already in use */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EADDRNOTAVAIL   99  </span><span style="color:#75715e">/* Cannot assign requested address */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENETDOWN    100 </span><span style="color:#75715e">/* Network is down */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENETUNREACH 101 </span><span style="color:#75715e">/* Network is unreachable */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENETRESET   102 </span><span style="color:#75715e">/* Network dropped connection because of reset */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECONNABORTED    103 </span><span style="color:#75715e">/* Software caused connection abort */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECONNRESET  104 </span><span style="color:#75715e">/* Connection reset by peer */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOBUFS     105 </span><span style="color:#75715e">/* No buffer space available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EISCONN     106 </span><span style="color:#75715e">/* Transport endpoint is already connected */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTCONN    107 </span><span style="color:#75715e">/* Transport endpoint is not connected */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESHUTDOWN   108 </span><span style="color:#75715e">/* Cannot send after transport endpoint shutdown */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ETOOMANYREFS    109 </span><span style="color:#75715e">/* Too many references: cannot splice */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ETIMEDOUT   110 </span><span style="color:#75715e">/* Connection timed out */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECONNREFUSED    111 </span><span style="color:#75715e">/* Connection refused */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EHOSTDOWN   112 </span><span style="color:#75715e">/* Host is down */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EHOSTUNREACH    113 </span><span style="color:#75715e">/* No route to host */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EALREADY    114 </span><span style="color:#75715e">/* Operation already in progress */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EINPROGRESS 115 </span><span style="color:#75715e">/* Operation now in progress */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ESTALE      116 </span><span style="color:#75715e">/* Stale NFS file handle */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EUCLEAN     117 </span><span style="color:#75715e">/* Structure needs cleaning */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTNAM     118 </span><span style="color:#75715e">/* Not a XENIX named type file */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENAVAIL     119 </span><span style="color:#75715e">/* No XENIX semaphores available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EISNAM      120 </span><span style="color:#75715e">/* Is a named type file */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EREMOTEIO   121 </span><span style="color:#75715e">/* Remote I/O error */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EDQUOT      122 </span><span style="color:#75715e">/* Quota exceeded */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOMEDIUM   123 </span><span style="color:#75715e">/* No medium found */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EMEDIUMTYPE 124 </span><span style="color:#75715e">/* Wrong medium type */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ECANCELED   125 </span><span style="color:#75715e">/* Operation Canceled */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOKEY      126 </span><span style="color:#75715e">/* Required key not available */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EKEYEXPIRED 127 </span><span style="color:#75715e">/* Key has expired */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EKEYREVOKED 128 </span><span style="color:#75715e">/* Key has been revoked */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define EKEYREJECTED    129 </span><span style="color:#75715e">/* Key was rejected by service */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/* for robust mutexes */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define EOWNERDEAD  130 </span><span style="color:#75715e">/* Owner died */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ENOTRECOVERABLE 131 </span><span style="color:#75715e">/* State not recoverable */</span><span style="color:#75715e">
+</span></span></span></code></pre></div>
+</div>
+
+        </div>
+<script type="text/javascript" src="/js/messynotes.js"></script>
+
+
+
+<div class="footer"><a href="https://github.com/mmessmore/hugo-messynotes">Messynotes Hugo Theme</a> &copy;2022 Mike Messmore</div>
+</body>
+</html>

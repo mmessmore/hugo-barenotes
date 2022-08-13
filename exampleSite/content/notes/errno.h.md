@@ -2,13 +2,18 @@
 title: errno.h
 date: 2022-01-28T14:37:28.403Z
 lastmod: 2022-01-28T14:40:57.135Z
-tags: [reference, errors]
+tags: [reference, errors, syntax]
 categories: [reference]
 ---
 
-`errno.h` contents
+`errno.h` contents as a codefence example
 
 <!--more-->
+
+The theme uses the normal Chroma-based syntax highlighting in Hugo.
+
+You can override the theme by generating the CSS and placing it in
+`/static/syntax.css`.
 
 
 ## `errno.h`

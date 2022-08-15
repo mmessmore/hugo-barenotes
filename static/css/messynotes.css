@@ -152,6 +152,10 @@ h1.title {
 h2.boxtitle {
     text-align: center;
 }
+div.todo {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
 div.box {
     grid-column-start: auto;
     grid-column-end: span 1;

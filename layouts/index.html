@@ -3,22 +3,11 @@
 <div class="maincontainer">
   <h1 class="title">{{ .Site.Title }}</h1>
 
-
-  <div class="box">
-    <h2 class="boxtitle">Notes</h2>
-    {{ $mysection := site.GetPage "/notes/" }}
+  <div class="todo">
+    <h2 class="boxtitle">TODO</h2>
+    {{ $mysection := site.GetPage "/categories/todo" }}
     {{ range $mysection.Pages }}
-      {{ $noteClass := "" }}
-      {{ $private := false }}
-      {{ range .Params.categories }}
-        {{ if in $privateCats . }}
-          {{ $private = true }}
-        {{ end }}
-      {{ end }}
-      {{ if or (eq .Params.private "true" true) $private }}
-        {{ $noteClass = "private" }}
-      {{ end }}
-    <div class="{{ $noteClass }}">
+    <div>
       {{ partial "listitem.html" . }}
     </div>
     {{ end }}
@@ -54,6 +43,8 @@
         {{ end }}
       </div>
     </div>
+  </div>
+  <div class="box">
     <h2 class="boxtitle">Tags</h2>
     <div class="item">
       {{ $mysection := site.GetPage "/tags/" }}

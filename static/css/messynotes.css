@@ -85,6 +85,7 @@ blockquote {
 }
 code {
     font-family: var(--monospace);
+    padding: 1em;
 }
 a {
     color: var(--link);

@@ -1,13 +1,13 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/messynotes.css">
-    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
-    <link rel="stylesheet" type="text/css" href="/css/site.css">
-    {{ if .Params.music }}
-    <link rel="stylesheet" type="text/css" href="/css/abcjs-audio.css">
-    {{ end }}
-    {{ $title := print .Site.Title " | " .Title }}
-    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-    <title>{{ $title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}css/messynotes.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}css/syntax.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}css/site.css">
+  {{ if .Page.Store.Get "hasAbc" }}
+  <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}css/abcjs-audio.css">
+  {{ end }}
+  {{ $title := print .Site.Title " | " .Title }}
+  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  <title>{{ $title }}</title>
 </head>

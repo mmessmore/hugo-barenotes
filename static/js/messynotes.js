@@ -1,8 +1,6 @@
-
-
-function togglePrivate() {
+function togglePrivate(invert=true) {
   console.log("toggle");
-  var slider = document.getElementById("privateSlider");
+  var toggle = document.getElementById("privateSlider");
   var elements = document.getElementsByClassName("private");
 
   if (elements.length == 0) {
@@ -11,18 +9,25 @@ function togglePrivate() {
 
   // assume everything is the same
   var display = "none";
-  var checked = false;
-  console.log(`checked: ${slider.checked}`);
-  if (slider.checked == false) {
+  var checked = toggle.checked;
+  if (invert) {
+    checked = ! checked;
+  }
+  console.log(toggle);
+  console.log(`toggle.checked: ${toggle.checked}`);
+  console.log(`checked: ${toggle.checked}`);
+  if (toggle.checked == true) {
     console.log("hidden");
     display = "block";
-    checked = true;
+    checked = false;
   }
 
   for (let i = 0; i < elements.length; i++) {
     elements[i].style.display = display;
   }
-  slider.checked = checked;
+
+
+  toggle.checked = checked;
 }
 
 function attachSlider() {
@@ -39,7 +44,7 @@ function attachSlider() {
   body.addEventListener(
     "keyup", event => {
       if (event.key == "P") {
-        togglePrivate();
+        togglePrivate(false);
       }
     });
 }

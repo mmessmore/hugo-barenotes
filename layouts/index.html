@@ -1,70 +1,77 @@
 {{ define "main" }}
-{{ $privateCats := .Site.Params.privateCategories }}
-<div class="maincontainer">
-  <h1 class="title">{{ .Site.Title }}</h1>
-
-  <div class="todo">
-    <h2 class="boxtitle">TODO</h2>
-    {{ $mysection := site.GetPage "/categories/todo" }}
-    {{ range $mysection.Pages }}
-    <div>
-      {{ partial "listitem.html" . }}
-    </div>
-    {{ end }}
-  </div>
-
-  <div class="box">
-    <h2 class="boxtitle">Categories</h2>
-    <div class="item">
-      {{ $mysection := site.GetPage "/categories/" }}
+<div class="wrapper">
+  <header class="title"><h1>{{ .Site.Title }}</h1></header>
+  <article class="content">
+    <div class="wideSection">
+      <h2 class="title">TODO</h2>
+      {{ $mysection := site.GetPage "/categories/todo" }}
+      {{ range $mysection.Pages }}
       <div>
-        {{ range (sort $mysection.Pages "Title") }}
-          {{ if eq .Title "todo" }}
-            {{continue}}
-          {{end}}
+        {{ partial "listitem.html" . }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="narrowSection">
+      <h2 class="title">Categories</h2>
+      <div class="item">
+        {{ $mysection := site.GetPage "/categories/" }}
         <div>
-        {{ $classes := "title" }}
-        {{ if in .Site.Params.privateCategories .Title }}
-          {{ $classes = print $classes " private" }}
-        {{ end }}
-        <a class="{{ $classes }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ $innerpath := path.Join "/categories" .Title }}
-        {{ $innersection := site.GetPage $innerpath }}
-        <ul class="cats">
-          {{ range $innersection.Pages }}
-            {{ if and (eq .Params.private "true" true) (lt (strings.Count $classes "private") 1)}}
-              {{ $classes = print $classes " private" }}
-            {{ end }}
-            <li class="{{ $classes }}">{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
+          {{ range (sort $mysection.Pages "Title") }}
+            {{ if eq .Title "todo" }}
+              {{continue}}
+            {{end}}
+          <div>
+          {{ $classes := "title" }}
+          {{ if in .Site.Params.privateCategories .Title }}
+            {{ $classes = print $classes " private" }}
           {{ end }}
-        </ul>
+          <a class="{{ $classes }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ $innerpath := path.Join "/categories" .Title }}
+          {{ $innersection := site.GetPage $innerpath }}
+          <ul class="cats">
+            {{ range $innersection.Pages }}
+              {{ if and (eq .Params.private "true" true) (lt (strings.Count $classes "private") 1)}}
+                {{ $classes = print $classes " private" }}
+              {{ end }}
+              <li class="{{ $classes }}"><a href="{{ .Permalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
       </div>
     </div>
-  </div>
-  <div class="box">
-    <h2 class="boxtitle">Tags</h2>
+    <div class="narrowSection">
+      <h2>Tags</h2>
+      <div class="item">
+        {{ $mysection := site.GetPage "/tags/" }}
+        <div class="indexTagContainer">
+          {{ range (sort $mysection.Pages "Title") }}
+          <div class="tagItem small">
+          <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </article>
+  <aside class="side">
+    <h2 class="title">Bookmarks</h2>
     <div class="item">
-      {{ $mysection := site.GetPage "/tags/" }}
-      <div class="indexTagContainer">
-        {{ range (sort $mysection.Pages "Title") }}
-        <div class="tagItem small">
-        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </div>
+     <ul>
+      {{ range site.Data.bookmarks.Categories }}
+      <li> {{ .Name }}
+        <ul>
+        {{ range .Items }}
+        <li><a href="{{.URL}}">{{.Name}}</a></li>
         {{ end }}
-      </div>
+        </ul>
+      </li>
+      {{ end }}
+      </ul>
     </div>
-  </div>
-  <div class="controls">
-    <div class="control" id="privateControl">
-      <p class="controlLabel">Show Private</p>
-      <label class="switch">
-        <input type="checkbox" id="privateSlider">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
+  </aside>
 </div>
 {{ end }}

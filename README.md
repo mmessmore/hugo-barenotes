@@ -130,6 +130,9 @@ PRs are appreciated.  I'll try to deal with bugs in Issues.  Feature requests
 without a PR will probably take some time and only be done if they seem useful
 to me personally.
 
+Pure bug fix PRs can go against 'main'.  All else should be based on and PRed
+to 'develop'.
+
 I have a pretty demanding "real job" as well as a family I enjoy being around.
 
 ## License

@@ -229,68 +229,23 @@ ul.bookmarks {
     padding: 0;
 }
 
-/* control bar */
-div.controls {
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    text-align: right;
-    margin: 0 2em 0 2em;
-}
-div.control {
-    text-align: center;
-}
-p.controlLabel {
-    font-family: var(--sans-serif);
+/* Tags */
+div.indexTagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    gap: 1em 1em;
 }
 
-/* toggle switch(es) */
-label.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+div.tagItem {
+    border: 1px solid var(--link);
+    border-radius: 1em;
+    padding: .33em;
+    background: var(--link);
 }
-label.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-span.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* TODO: handle darkmode */
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-span.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-label.switch input:checked + .slider {
-    /* TODO darkmode */
-    background-color: #2196F3;
-}
-
-label.switch input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-label.switch input:checked + .slider:before {
-    transform: translateX(26px);
+div.tagItem a {
+    color: var(--bg);
 }
 
 /* private stuff */

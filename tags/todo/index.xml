@@ -13,7 +13,12 @@
       <pubDate>Mon, 24 Jan 2022 14:43:21 +0000</pubDate>
       
       <guid>https://mmessmore.github.io/hugo-messynotes/notes/todo/</guid>
-      <description>&lt;p&gt;Stuff I need to do&lt;/p&gt;</description>
+      <description>&lt;p&gt;Things above the &amp;ldquo;more&amp;rdquo; comment are displayed on the index.&lt;/p&gt;
+&lt;h2 id=&#34;today&#34;&gt;Today&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; eat healthier&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; exercise more&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,19 @@
+Categories:
+    - Name: Hugo
+      Items:
+        - Name: Hugo Template Documentation
+          URL: https://gohugo.io/templates/
+        - Name: Hugo Data Templates
+          URL: https://gohugo.io/templates/data-templates/
+    - Name: Messynotes
+      Items:
+        - Name: Messynotes CLI
+          URL: https://github.com/mmessmore/messynotes
+        - Name: Messynotes Hugo Theme
+          URL: https://github.com/mmessmore/hugo-messynotes
+        - Name: Messynotes Hugo Theme Example
+          URL: https://mmessmore.github.io/hugo-messynotes/
+    - Name: Cobra
+      Items:
+        - Name: Shell Completion
+          URL: https://github.com/spf13/cobra/blob/main/shell_completions.md

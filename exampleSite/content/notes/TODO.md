@@ -7,7 +7,12 @@ tags: [todo]
 categories: [todo]
 ---
 
-Stuff I need to do
+Things above the "more" comment are displayed on the index.
+
+## Today
+
+- [ ] eat healthier
+- [ ] exercise more
 
 <!--more-->
 

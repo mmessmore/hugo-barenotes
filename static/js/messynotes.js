@@ -4,7 +4,6 @@ function togglePrivate() {
 
   if (toggle.checked) {
     display = "initial";
-
   } else {
     display = "none";
   }

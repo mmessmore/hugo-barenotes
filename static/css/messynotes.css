@@ -223,6 +223,12 @@ div.item {
     padding: 1em;
 }
 
+ul.bookmarks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* control bar */
 div.controls {
     grid-column-start: 1;

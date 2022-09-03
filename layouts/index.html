@@ -60,10 +60,10 @@
   <aside class="side">
     <h2 class="title">Bookmarks</h2>
     <div class="item">
-     <ul>
+     <ul class="bookmarks">
       {{ range site.Data.bookmarks.Categories }}
       <li> {{ .Name }}
-        <ul>
+        <ul style="list-style-image:url('{{ site.BaseURL }}img/external_link.svg');">
         {{ range .Items }}
         <li><a href="{{.URL}}">{{.Name}}</a></li>
         {{ end }}
@@ -71,6 +71,11 @@
       </li>
       {{ end }}
       </ul>
+    </div>
+    <div class="item">
+      <h2 class="title">Options</h2>
+      <input type="checkbox" id="privateSlider">
+      <label for="privateSlider">Private</label>
     </div>
   </aside>
 </div>
